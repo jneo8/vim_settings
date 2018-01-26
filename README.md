@@ -3,8 +3,16 @@
 
 ## Step 1.
 
+`mac OS`
+
 ```bash
 brew install python3 && brew remove vim ;brew cleanup; brew install vim --with-python3 --without-python --with-ruby --with-override-system-vi
+```
+
+`ubuntu`
+
+```bash
+sudo apt-get install python3 && brew remove vim ;sudo apt-get cleanup; sudo apt-get install vim; sudo apt-get install vim-nox;
 ```
 
 ## Step 2.
@@ -21,7 +29,11 @@ mkdir -p  ~/.vim/dirs && cd  ~/.vim/dirs && mkdir undos backups tmp
 
 ## Step 4
 
-Download vimrc
+download vimrc
+
+```
+git clone https://github.com/jneo8/vim_settings.git; cp vim_settings/vimrc ~/.vimrc;
+```
 
 ## Step 5
 
