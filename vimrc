@@ -46,6 +46,10 @@ let g:airline_powerline_fonts = 1                       " use poewrline-fonts
 let g:airline_theme = 'cool'
 let g:airline#extensions#tabline#enabled = 1            " Smarter tab line (https://github.com/vim-airline/vim-airline#smarter-tab-line)
 let g:airline#extensions#whitespace#enabled = 1
+let g:ale_open_list = 1
+" let g:ale_keep_list_window_open = 1
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " vim-devicons
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 set encoding=utf-8                                      " The encoding displayed
