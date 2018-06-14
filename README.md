@@ -12,7 +12,7 @@ brew install python3 && brew remove vim ;brew cleanup; brew install vim --with-p
 `ubuntu`
 
 ```bash
-sudo apt-get install python3 && brew remove vim ;sudo apt-get cleanup; sudo apt-get install vim; sudo apt-get install vim-nox;
+sudo apt-get install python3;sudo apt-get cleanup; sudo apt-get install vim; sudo apt-get install vim-nox;
 ```
 
 ## Step 2.
