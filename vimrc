@@ -54,6 +54,10 @@ Plug 'hdima/python-syntax'
 " vim-python-pep8-indent
 " Plug 'Vimjas/vim-python-pep8-indent'
 
+"
+" Theme
+"
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 call plug#end()
 
@@ -92,3 +96,38 @@ set backupdir=~/.vim/dirs/backups " where to put backup files
 set undofile                      " persistent undos - undo after you re-open the file
 set undodir=~/.vim/dirs/undos
 set viminfo+=n~/.vim/dirs/viminfo
+
+"
+" Basic Parameter setting
+"
+syntax on
+set nocompatible
+set number
+set mouse+=a
+set backspace=indent,eol,start
+
+" Indentation & tab
+set autoindent nosmartindent  " auto/smart indent
+set smarttab
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
+" Search
+set hlsearch
+set incsearch
+
+" background & theme
+set background=dark
+colorscheme challenger_deep
+
+
+" highlight color
+set cursorline " highlight the whole current line
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+highlight CursorLine cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkblue ctermfg=white
+
+" highlight python
+augroup python
+    autocmd FileType python let &colorcolumn="80,".join(range(81,999),",")
+augroup END
