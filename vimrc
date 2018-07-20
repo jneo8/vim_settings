@@ -1,7 +1,24 @@
-" Vim-plug initialization (taken from fisa-vim-config)
 " My vimrc
 
+" better backup, swap and undos storage (taken from fisa-vim-config)
+" Create folder if not exist.
+silent !mkdir -p ~/.vim/dirs/tmp > /dev/null 2>&1
+silent !mkdir -p ~/.vim/dirs/backups > /dev/null 2>&1
+silent !mkdir -p ~/.vim/dirs/undos > /dev/null 2>&1
+
+set directory=~/.vim/dirs/tmp     " directory to place swap files in
+set backup                        " make backup files
+set backupdir=~/.vim/dirs/backups " where to put backup files
+set undofile                      " persistent undos - undo after you re-open the file
+set undodir=~/.vim/dirs/undos
+set viminfo+=n~/.vim/dirs/viminfo
+
+
+" Vim-plug initialization (taken from fisa-vim-config)
 call plug#begin('~/.vim/plugged')
+
+" Asynchronous Linter Engine
+Plug 'w0rp/ale'
 
 " NerdTree
 Plug 'scrooloose/nerdtree'
@@ -61,6 +78,19 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 call plug#end()
 
+" ALE
+let g:ale_sign_column_always = 1
+let g:ale_open_list = 1
+let g:ale_keep_list_window_open = 0
+let g:ale_list_window_size = 5
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+
 " NERDTree Auto open
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -72,10 +102,6 @@ set t_Co=256 " enable 256 colors in vim (if not set, vim-airline-theme might not
 let g:airline_powerline_fonts = 1  " use poewrline-fonts
 let g:airline#extensions#tabline#enabled = 1 " Smarter tab line (https://github.com/vim-airline/vim-airline#smarter-tab-line)
 let g:airline#extensions#whitespace#enabled = 1
-let g:ale_open_list = 1
-let g:ale_keep_list_window_open = 1
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " vim-devicons & encoding
 set encoding=utf-8  " The encoding displayed
@@ -83,19 +109,6 @@ set fileencoding=utf-8  " The encoding written to file
 
 " python highlighting
 let python_highlight_all = 1
-
-" better backup, swap and undos storage (taken from fisa-vim-config)
-" Create folder if not exist.
-silent !mkdir -p ~/.vim/dirs/tmp > /dev/null 2>&1
-silent !mkdir -p ~/.vim/dirs/backups > /dev/null 2>&1
-silent !mkdir -p ~/.vim/dirs/undos > /dev/null 2>&1
-
-set directory=~/.vim/dirs/tmp     " directory to place swap files in
-set backup                        " make backup files
-set backupdir=~/.vim/dirs/backups " where to put backup files
-set undofile                      " persistent undos - undo after you re-open the file
-set undodir=~/.vim/dirs/undos
-set viminfo+=n~/.vim/dirs/viminfo
 
 "
 " Basic Parameter setting
@@ -126,8 +139,3 @@ colorscheme challenger_deep
 set cursorline " highlight the whole current line
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 highlight CursorLine cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkblue ctermfg=white
-
-" highlight python
-augroup python
-    autocmd FileType python let &colorcolumn="80,".join(range(81,999),",")
-augroup END
