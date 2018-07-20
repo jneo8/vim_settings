@@ -19,6 +19,9 @@ Plug 'vim-airline/vim-airline-themes'
 " completor.vim (https://github.com/maralla/completor.vim)
 Plug 'maralla/completor.vim'
 
+" vim-multiple-cursors
+Plug 'terryma/vim-multiple-cursors'
+
 
 "
 " Some Plugin may useful ???
