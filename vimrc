@@ -16,6 +16,17 @@ Plug 'vim-airline/vim-airline-themes'
 " completor.vim (https://github.com/maralla/completor.vim)
 Plug 'maralla/completor.vim'
 
+
+"
+" Some Plugin may useful ???
+"
+
+" automatically enclose quotes and brackets
+" Plug 'jiangmiao/auto-pairs'
+
+" Supertab is a vim plugin which allows you to use <Tab> for all your insert completion needs
+" Plug 'ervandew/supertab'
+
 call plug#end()
 
 " NERDTree Auto open
