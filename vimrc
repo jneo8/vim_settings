@@ -6,6 +6,9 @@ call plug#begin('~/.vim/plugged')
 " NerdTree
 Plug 'scrooloose/nerdtree'
 
+" vim-devicons, Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline, Powerline, Unite, vim-startify and more.
+Plug 'ryanoasis/vim-devicons'
+
 " Gitgutter
 Plug 'airblade/vim-gitgutter'
 
@@ -45,3 +48,5 @@ let g:ale_keep_list_window_open = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
+" vim-devicons
+set encoding=UTF-8
