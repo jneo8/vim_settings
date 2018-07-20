@@ -22,6 +22,8 @@ Plug 'maralla/completor.vim'
 " vim-multiple-cursors
 Plug 'terryma/vim-multiple-cursors'
 
+" farmergreg/vim-lastplace
+Plug 'farmergreg/vim-lastplace'
 
 "
 " Some Plugin may useful ???
