@@ -12,6 +12,10 @@ Plug 'ryanoasis/vim-devicons'
 " Gitgutter
 Plug 'airblade/vim-gitgutter'
 
+" acts like ctrlp, but even better
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -69,8 +73,22 @@ let g:ale_keep_list_window_open = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
-" vim-devicons
-set encoding=UTF-8
+" vim-devicons & encoding
+set encoding=utf-8  " The encoding displayed
+set fileencoding=utf-8  " The encoding written to file
 
 " python highlighting
 let python_highlight_all = 1
+
+" better backup, swap and undos storage (taken from fisa-vim-config)
+" Create folder if not exist.
+silent !mkdir -p ~/.vim/dirs/tmp > /dev/null 2>&1
+silent !mkdir -p ~/.vim/dirs/backups > /dev/null 2>&1
+silent !mkdir -p ~/.vim/dirs/undos > /dev/null 2>&1
+
+set directory=~/.vim/dirs/tmp     " directory to place swap files in
+set backup                        " make backup files
+set backupdir=~/.vim/dirs/backups " where to put backup files
+set undofile                      " persistent undos - undo after you re-open the file
+set undodir=~/.vim/dirs/undos
+set viminfo+=n~/.vim/dirs/viminfo
