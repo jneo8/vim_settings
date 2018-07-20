@@ -56,6 +56,8 @@ Plug 'alvan/vim-closetag'
 " python highlighting
 Plug 'hdima/python-syntax'
 
+" EditorConfig plugin for Vim http://editorconfig.org
+Plug 'editorconfig/editorconfig-vim'
 
 "
 " Some Plugin may useful ???
