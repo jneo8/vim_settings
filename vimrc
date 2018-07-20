@@ -3,6 +3,7 @@
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " NERDTree Auto open
