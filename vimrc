@@ -2,10 +2,26 @@
 " My vimrc
 
 call plug#begin('~/.vim/plugged')
+
+" NerdTree
 Plug 'scrooloose/nerdtree'
+
+" Gitgutter
 Plug 'airblade/vim-gitgutter'
+
+" Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" deoplete.nvim
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 call plug#end()
 
 " NERDTree Auto open
@@ -23,3 +39,7 @@ let g:ale_open_list = 1
 let g:ale_keep_list_window_open = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" deoplete.nvim
+let g:deoplete#enable_at_startup = 1
+set pyx=3
