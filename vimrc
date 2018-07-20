@@ -47,6 +47,10 @@ Plug 'hdima/python-syntax'
 " Plug 'ervandew/supertab'
 
 
+" vim-python-pep8-indent
+" Plug 'Vimjas/vim-python-pep8-indent'
+
+
 call plug#end()
 
 " NERDTree Auto open
