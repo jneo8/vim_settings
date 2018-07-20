@@ -29,6 +29,9 @@ Plug 'farmergreg/vim-lastplace'
 " emmet-vim is a vim plug-in which provides support for expanding abbreviations similar to emmet.
 Plug 'mattn/emmet-vim'
 
+" html autoclose
+Plug 'alvan/vim-closetag'
+
 "
 " Some Plugin may useful ???
 "
