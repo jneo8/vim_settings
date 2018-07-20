@@ -29,8 +29,12 @@ Plug 'farmergreg/vim-lastplace'
 " emmet-vim is a vim plug-in which provides support for expanding abbreviations similar to emmet.
 Plug 'mattn/emmet-vim'
 
-" html autoclose
+" html tag auto-close
 Plug 'alvan/vim-closetag'
+
+" python highlighting
+Plug 'hdima/python-syntax'
+
 
 "
 " Some Plugin may useful ???
@@ -41,6 +45,7 @@ Plug 'alvan/vim-closetag'
 
 " Supertab is a vim plugin which allows you to use <Tab> for all your insert completion needs
 " Plug 'ervandew/supertab'
+
 
 call plug#end()
 
@@ -62,3 +67,6 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " vim-devicons
 set encoding=UTF-8
+
+" python highlighting
+let python_highlight_all = 1
