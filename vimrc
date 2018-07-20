@@ -55,7 +55,7 @@ Plug 'hdima/python-syntax'
 " Plug 'Vimjas/vim-python-pep8-indent'
 
 "
-" Theme
+" Theme, choose from https://github.com/rafi/awesome-vim-colorschemes
 "
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
