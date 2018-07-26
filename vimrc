@@ -59,6 +59,10 @@ Plug 'hdima/python-syntax'
 " EditorConfig plugin for Vim http://editorconfig.org
 Plug 'editorconfig/editorconfig-vim'
 
+" vim-go, Go development plugin for Vim
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+
 "
 " Some Plugin may useful ???
 "
