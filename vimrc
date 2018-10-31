@@ -59,6 +59,10 @@ Plug 'hdima/python-syntax'
 " EditorConfig plugin for Vim http://editorconfig.org
 Plug 'editorconfig/editorconfig-vim'
 
+" Vim motion on speed!
+Plug 'easymotion/vim-easymotion'
+
+
 "
 " Some Plugin may useful ???
 "
