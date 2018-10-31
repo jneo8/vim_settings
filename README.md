@@ -25,7 +25,7 @@ See: https://github.com/ggreer/the_silver_searcher
 - Step 3, Get vimrc
 
 ```
-git clone https://github.com/jneo8/vim_settings.git; cp ./vim_settings/vimrc ~/.vimrc;
+git clone https://github.com/jneo8/vim_settings.git; cp ./vim_settings/vimrc ~/.vimrc; rm -rf ./vim_settings;
 ```
 
 - Step 4, install plugin
