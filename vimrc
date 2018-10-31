@@ -62,6 +62,8 @@ Plug 'editorconfig/editorconfig-vim'
 " Vim motion on speed!
 Plug 'easymotion/vim-easymotion'
 
+" vim-go, Go development plugin for Vim
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 "
 " Some Plugin may useful ???
