@@ -34,3 +34,8 @@ wget https://raw.githubusercontent.com/jneo8/vim_settings/master/vimrc ~/vimrc; 
 :PlugInstall
 ```
 
+## Options
+
+- NERD-Fronts
+
+https://github.com/ryanoasis/nerd-fonts#option-3-install-script
