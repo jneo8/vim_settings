@@ -22,16 +22,10 @@ See: https://github.com/junegunn/vim-plug
 
 See: https://github.com/ggreer/the_silver_searcher
 
-- Step 3, Get vimrc
+- Step 3, Get vimrc && Run PlugInstall
 
 ```
-wget https://raw.githubusercontent.com/jneo8/vim_settings/master/vimrc ~/vimrc; cp ./vimrc ~/.vimrc; rm -f ~/vimrc
-```
-
-- Step 4, install plugin
-
-```
-:PlugInstall
+wget -q https://raw.githubusercontent.com/jneo8/vim_settings/master/vimrc ~/.vimrc; vim +'PlugInstall --sync' +qa;
 ```
 
 ## Options
