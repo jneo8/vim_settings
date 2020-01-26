@@ -145,5 +145,8 @@ colorscheme challenger_deep
 
 " highlight color
 set cursorline " highlight the whole current line
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
 highlight CursorLine cterm=NONE ctermbg=168 ctermfg=white guibg=darkblue ctermfg=white
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+highlight Normal guibg=NONE ctermbg=NONE
+highlight LineNr ctermfg=DarkGrey
+highlight Visual cterm=bold ctermbg=220 ctermfg=blue
