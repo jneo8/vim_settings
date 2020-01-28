@@ -151,3 +151,4 @@ highlight Normal guibg=NONE ctermbg=NONE
 highlight LineNr ctermfg=DarkGrey
 highlight Visual cterm=bold ctermbg=220 ctermfg=blue
 highlight Search cterm=bold ctermbg=220 ctermfg=blue
+highlight IncSearch cterm=bold ctermbg=220 ctermfg=blue
