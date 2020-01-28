@@ -88,7 +88,7 @@ call plug#end()
 
 " ALE
 let g:ale_sign_column_always = 1
-let g:ale_open_list = 1
+let g:ale_open_list = 0
 let g:ale_keep_list_window_open = 0
 let g:ale_list_window_size = 5
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
@@ -150,3 +150,4 @@ highlight ColorColumn ctermbg=235 guibg=#2c2d27
 highlight Normal guibg=NONE ctermbg=NONE
 highlight LineNr ctermfg=DarkGrey
 highlight Visual cterm=bold ctermbg=220 ctermfg=blue
+highlight Search cterm=bold ctermbg=220 ctermfg=blue
