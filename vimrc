@@ -82,7 +82,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "
 " Theme, choose from https://github.com/rafi/awesome-vim-colorschemes
 "
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+" Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'danilo-augusto/vim-afterglow', { 'as': 'afterglow' }
 
 call plug#end()
 
@@ -140,15 +141,19 @@ set incsearch
 
 " background & theme
 set background=dark
-" colorscheme challenger_deep
+
+" Setting afterglow theme
+let g:afterglow_blackout=1
+let g:afterglow_inherit_background=1
+colorscheme afterglow
 
 
 " highlight color
 set cursorline " highlight the whole current line
 highlight CursorLine cterm=NONE ctermbg=168 ctermfg=white guibg=darkblue ctermfg=white
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
-highlight Normal guibg=NONE ctermbg=NONE
-highlight LineNr ctermfg=DarkGrey
-highlight Search cterm=bold ctermbg=220 ctermfg=27
-highlight IncSearch cterm=bold ctermbg=220 ctermfg=27
+" highlight Normal guibg=NONE ctermbg=NONE
+" highlight LineNr ctermfg=DarkGrey
+" highlight Search cterm=bold ctermbg=220 ctermfg=27
+" highlight IncSearch cterm=bold ctermbg=220 ctermfg=27
 " highlight Visual cterm=bold ctermbg=220 ctermfg=27
