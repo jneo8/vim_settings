@@ -140,7 +140,7 @@ set incsearch
 
 " background & theme
 set background=dark
-colorscheme challenger_deep
+" colorscheme challenger_deep
 
 
 " highlight color
@@ -149,6 +149,6 @@ highlight CursorLine cterm=NONE ctermbg=168 ctermfg=white guibg=darkblue ctermfg
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 highlight Normal guibg=NONE ctermbg=NONE
 highlight LineNr ctermfg=DarkGrey
-highlight Visual cterm=bold ctermbg=220 ctermfg=blue
-highlight Search cterm=bold ctermbg=220 ctermfg=blue
-highlight IncSearch cterm=bold ctermbg=220 ctermfg=blue
+highlight Search cterm=bold ctermbg=220 ctermfg=27
+highlight IncSearch cterm=bold ctermbg=220 ctermfg=27
+" highlight Visual cterm=bold ctermbg=220 ctermfg=27
