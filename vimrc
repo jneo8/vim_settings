@@ -1,4 +1,4 @@
-" My vimrc
+" jneo8 vimrc (https://github.com/jneo8/vim_settings)
 
 " better backup, swap and undos storage (taken from fisa-vim-config)
 " Create folder if not exist.
@@ -65,6 +65,10 @@ Plug 'easymotion/vim-easymotion'
 " vim-go, Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" Markdown syntax highlighting (https://github.com/plasticboy/vim-markdown)
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 " makrdown preview (https://github.com/iamcco/markdown-preview.nvim)
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
@@ -90,41 +94,11 @@ Plug 'danilo-augusto/vim-afterglow', { 'as': 'afterglow' }
 
 call plug#end()
 
-" ALE
-let g:ale_sign_column_always = 1
-let g:ale_open_list = 0
-let g:ale_keep_list_window_open = 0
-let g:ale_list_window_size = 5
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
-
-" NERDTree Auto open
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" Airline
-set laststatus=2  " let airline appear all the time
-let g:airline_theme = 'term'
-set t_Co=256 " enable 256 colors in vim (if not set, vim-airline-theme might not show correctly)
-let g:airline_powerline_fonts = 1  " use poewrline-fonts
-let g:airline#extensions#tabline#enabled = 1 " Smarter tab line (https://github.com/vim-airline/vim-airline#smarter-tab-line)
-let g:airline#extensions#whitespace#enabled = 1
-
-" vim-devicons & encoding
-set encoding=utf-8  " The encoding displayed
-set fileencoding=utf-8  " The encoding written to file
-
-" python highlighting
-let python_highlight_all = 1
 
 "
-" Basic Parameter setting
+" Basic Parameter Setting
 "
+
 syntax on
 set nocompatible
 set number
@@ -160,3 +134,53 @@ highlight ColorColumn ctermbg=235 guibg=#2c2d27
 " highlight Search cterm=bold ctermbg=220 ctermfg=27
 " highlight IncSearch cterm=bold ctermbg=220 ctermfg=27
 " highlight Visual cterm=bold ctermbg=220 ctermfg=27
+"
+
+"
+" End Basic Parameter setting
+"
+
+"
+" Plug Parameter setting
+"
+
+" vim-devicons & encoding
+set encoding=utf-8  " The encoding displayed
+set fileencoding=utf-8  " The encoding written to file
+
+" ALE
+let g:ale_sign_column_always = 1
+let g:ale_open_list = 0
+let g:ale_keep_list_window_open = 0
+let g:ale_list_window_size = 5
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+
+" NERDTree Auto open
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Airline
+set laststatus=2  " let airline appear all the time
+let g:airline_theme = 'term'
+set t_Co=256 " enable 256 colors in vim (if not set, vim-airline-theme might not show correctly)
+let g:airline_powerline_fonts = 1  " use poewrline-fonts
+let g:airline#extensions#tabline#enabled = 1 " Smarter tab line (https://github.com/vim-airline/vim-airline#smarter-tab-line)
+let g:airline#extensions#whitespace#enabled = 1
+
+
+" python highlighting
+let python_highlight_all = 1
+
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1
+
+
+"
+" End Plug Parameter setting
+"
