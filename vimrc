@@ -65,6 +65,9 @@ Plug 'easymotion/vim-easymotion'
 " vim-go, Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" makrdown preview (https://github.com/iamcco/markdown-preview.nvim)
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
 "
 " Some Plugin may useful ???
 "
