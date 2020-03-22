@@ -53,17 +53,15 @@ Plug 'mattn/emmet-vim'
 " html tag auto-close
 Plug 'alvan/vim-closetag'
 
-" python highlighting
-Plug 'hdima/python-syntax'
+" Vim motion on speed!
+Plug 'easymotion/vim-easymotion'
 
 " EditorConfig plugin for Vim http://editorconfig.org
 Plug 'editorconfig/editorconfig-vim'
 
-" Vim motion on speed!
-Plug 'easymotion/vim-easymotion'
-
-" vim-go, Go development plugin for Vim
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"
+" Plug for markdown
+"
 
 " Markdown syntax highlighting (https://github.com/plasticboy/vim-markdown)
 Plug 'godlygeek/tabular'
@@ -71,6 +69,19 @@ Plug 'plasticboy/vim-markdown'
 
 " makrdown preview (https://github.com/iamcco/markdown-preview.nvim)
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
+"
+" Plug for specific language
+"
+
+" python highlighting
+Plug 'hdima/python-syntax'
+
+" vim-go, Go development plugin for Vim
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" vim Scala https://github.com/derekwyatt/vim-scala
+Plug 'derekwyatt/vim-scala'
 
 "
 " Some Plugin may useful ???
@@ -89,8 +100,10 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 "
 " Theme, choose from https://github.com/rafi/awesome-vim-colorschemes
 "
+
 " Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'danilo-augusto/vim-afterglow', { 'as': 'afterglow' }
+
 
 call plug#end()
 
