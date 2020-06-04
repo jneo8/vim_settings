@@ -59,6 +59,11 @@ Plug 'editorconfig/editorconfig-vim'
 " Vim motion on speed!
 Plug 'easymotion/vim-easymotion'
 
+
+"
+" Plug for markdown
+"
+
 " Markdown syntax highlighting (https://github.com/plasticboy/vim-markdown)
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -76,7 +81,7 @@ Plug 'hdima/python-syntax'
 " vim-go, Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-" vim-scala, integration of Scala into Vim.
+" vim Scala https://github.com/derekwyatt/vim-scala
 Plug 'derekwyatt/vim-scala'
 
 "
@@ -96,8 +101,10 @@ Plug 'derekwyatt/vim-scala'
 "
 " Theme, choose from https://github.com/rafi/awesome-vim-colorschemes
 "
+
 " Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'danilo-augusto/vim-afterglow', { 'as': 'afterglow' }
+
 
 call plug#end()
 
