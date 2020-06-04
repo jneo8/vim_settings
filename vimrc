@@ -53,17 +53,11 @@ Plug 'mattn/emmet-vim'
 " html tag auto-close
 Plug 'alvan/vim-closetag'
 
-" python highlighting
-Plug 'hdima/python-syntax'
-
 " EditorConfig plugin for Vim http://editorconfig.org
 Plug 'editorconfig/editorconfig-vim'
 
 " Vim motion on speed!
 Plug 'easymotion/vim-easymotion'
-
-" vim-go, Go development plugin for Vim
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Markdown syntax highlighting (https://github.com/plasticboy/vim-markdown)
 Plug 'godlygeek/tabular'
@@ -71,6 +65,19 @@ Plug 'plasticboy/vim-markdown'
 
 " makrdown preview (https://github.com/iamcco/markdown-preview.nvim)
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
+"
+" Plug for specific language
+"
+
+" python highlighting
+Plug 'hdima/python-syntax'
+
+" vim-go, Go development plugin for Vim
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" vim-scala, integration of Scala into Vim.
+Plug 'derekwyatt/vim-scala'
 
 "
 " Some Plugin may useful ???
@@ -164,6 +171,8 @@ let g:ale_set_quickfix = 1
 " NERDTree Auto open
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+:command NE NERDTree
+:command NEF NERDTreeFocus
 
 " Airline
 set laststatus=2  " let airline appear all the time
