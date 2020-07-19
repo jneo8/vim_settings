@@ -53,11 +53,12 @@ Plug 'mattn/emmet-vim'
 " html tag auto-close
 Plug 'alvan/vim-closetag'
 
+" EditorConfig plugin for Vim http://editorconfig.org
+Plug 'editorconfig/editorconfig-vim'
+
 " Vim motion on speed!
 Plug 'easymotion/vim-easymotion'
 
-" EditorConfig plugin for Vim http://editorconfig.org
-Plug 'editorconfig/editorconfig-vim'
 
 "
 " Plug for markdown
@@ -177,6 +178,8 @@ let g:ale_set_quickfix = 1
 " NERDTree Auto open
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+:command NE NERDTree
+:command NEF NERDTreeFocus
 
 " Airline
 set laststatus=2  " let airline appear all the time
