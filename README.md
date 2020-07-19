@@ -1,5 +1,15 @@
 # Here is my vim settings.
 
+
+## !!Notice 
+
+This porject will be merge to [my dotfile](https://github.com/jneo8/dotfiles).
+And will not be update anymore.
+Please switch to my dot file.
+Thanks.
+
+---
+
 - Step 1
 
 `macos`
